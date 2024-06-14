@@ -70,8 +70,8 @@ export default defineComponent({
               options.value = data.features.map(feature => {
                 if (feature.properties && feature.properties['wmo:topicHierarchy']) {
                   return {
-                    name: feature.properties['wmo:topicHierarchy'],
-                    id: feature.properties['wmo:topicHierarchy'],
+                    name: feature.properties['wmo:topicHierarchy'].replace('origin/a/wis2/', ''),
+                    id: feature.properties['wmo:topicHierarchy'].replace('origin/a/wis2/', ''),
                     description: feature.properties['description']
                   }
                 }
